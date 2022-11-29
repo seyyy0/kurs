@@ -1,0 +1,38 @@
+body,html{
+    margin:0px;
+    padding: 0px;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+#PokedexImg{
+    position: fixed;
+    border-radius: 20px;
+    top:50px;
+    z-index: 1;
+    align-self:center;
+}
+#buttonRight{
+    height: 25px;
+    background-color: blueviolet;
+    width: 25px;
+    display: inline-block;
+    z-index: 2;
+    z-index: 4;
+}
+#buttonLeft{
+    height: 25px;
+    background-color: blueviolet;
+    width: 25px;
+    display: inline-block;
+    z-index: 2;
+    z-index: 4;
+}
+#PokemonSprite{
+    z-index: 3;
+    display: inline-block;
+}
+
