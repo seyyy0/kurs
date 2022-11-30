@@ -9,30 +9,34 @@ body,html{
     justify-content: center;
 }
 #PokedexImg{
-    position: fixed;
+    position: absolute;
     border-radius: 20px;
     top:50px;
     z-index: 1;
-    align-self:center;
 }
 #buttonRight{
     height: 25px;
-    background-color: blueviolet;
     width: 25px;
-    display: inline-block;
-    z-index: 2;
+    background-color: blueviolet;
     z-index: 4;
+    position: absolute;
+    top:762px;
+    left:580px;
 }
 #buttonLeft{
     height: 25px;
-    background-color: blueviolet;
     width: 25px;
-    display: inline-block;
-    z-index: 2;
+    background-color: blueviolet;
     z-index: 4;
+    position: absolute;
+    top:762px;
+    left:513px;
 }
+
 #PokemonSprite{
     z-index: 3;
-    display: inline-block;
+    position: relative;
+    top:250px;
+    align-self: center;
 }
 
