@@ -1,5 +1,7 @@
 const promises = [];
-const i = 1;
+var i = 0;
+const rightButton = document.getElementById("buttonRight");
+const leftButton = document.getElementById("buttonLeft");
 const fetchPokeApi = () => {
   // Getting data of first 150 pokemon into an array of objects
   for (let i = 1; i <= 150; i++) {
@@ -13,15 +15,22 @@ const fetchPokeApi = () => {
       sprite: data.sprites.other.dream_world["front_default"],
       type: data.types.map((type) => type.type.name).join(" & "),
     }));
-    console.log(Pokemon);
+    rightButton.addEventListener("click", nextPokemon);
+    function nextPokemon() {
+      i++;
+      CurrentPokemon(Pokemon[i]);
+    }
+    leftButton.addEventListener("click", previousPokemon);
+    function previousPokemon() {
+      i--;
+      CurrentPokemon(Pokemon[i]);
+    }
+    CurrentPokemon(Pokemon[i]);
   });
 };
 fetchPokeApi();
 
-var rightButton = document.getElementById("buttonRight"); // Changing of pokemon
-rightButton.addEventListener("click", nextPokemon);
-function nextPokemon() {}
-
-var CurrentImg = document.getElementById("PokemonSprite");
-CurrentImg.src =
-  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg";
+const CurrentImg = document.getElementById("PokemonSprite"); // Setting of first/next/prev pokemon sprite
+const CurrentPokemon = (Pokemon) => {
+  CurrentImg.src = Pokemon.sprite;
+};
