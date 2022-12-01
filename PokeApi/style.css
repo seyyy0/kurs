@@ -40,3 +40,22 @@ body,html{
     align-self: center;
 }
 
+#pokemonName{
+    position: absolute;
+    display: inline-block;
+    top:637px;
+    left:740px;
+    z-index: 7;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+}
+#pokemonType{
+    position: absolute;
+    display: inline-block;
+    top: 637px;
+    left:1020px;
+    z-index: 7;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    text-align: right;
+}
